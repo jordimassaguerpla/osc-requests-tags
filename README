@@ -1,0 +1,35 @@
+Plugin for openSUSE build service that will list all open requests* on a project with a list of hashtags found in the request diff.
+
+Patterns can be used to identify bugs, features, etc.
+
+What it is this for?
+
+Very often we are flooded by requests to a project and it is difficult to
+to group them. This way, if you add some hashtags in your changes file, this
+plugin will list them and make life easier for the reviewer.
+
+Example
+
+We have packages foo, bar, and hola.
+foo bar are fixing bug#123 and hola is for feature#3.
+
+Then, in the foo and bar changelog, we will add "bug#123" and in the hola
+changelog, "feature#3".
+
+Then, we will submit the three packages to openSUSE:super_product.
+
+The "release manager" of super_product will then run
+
+osc requests_tags openSUSE:super_product
+
+and the output will something like
+
+request_id: 1 bug#123
+request_id: 2 bug#123
+request_id: 3 feature#3
+
+Then, he may decide to accept request 1 and 2 into his test/staging project and
+after that, accepte feature 3. 
+
+
+(*) In new and review state. It will not show declined requests
