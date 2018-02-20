@@ -2,7 +2,7 @@ import osc.core
 import osc.conf
 import re
 
-patterns = ["bsc#\w+"]
+patterns = ["\w+#\w+"]
 
 def do_requests_tags(self, subcmd, opts, project):
   """${cmd_name}: Lists requests with hashtags
