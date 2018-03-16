@@ -14,7 +14,6 @@ def do_requests_tags(self, subcmd, opts, project):
   ${cmd_usage}
   ${cmd_option_list}
   """
-  conf.get_config()
   api = self.get_api_url()
   requests = get_request_list(api, project = project, req_state =('new', 'review'))
   for request in requests:
