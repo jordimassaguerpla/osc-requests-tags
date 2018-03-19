@@ -31,5 +31,13 @@ request_id: 3 feature#3
 Then, he may decide to accept request 1 and 2 into his test/staging project and
 after that, accepte feature 3. 
 
+The RPM is being built under:
+
+https://build.opensuse.org/project/show/home:jordimassaguerpla:osc-plugins
+
+You can use that RPM to install it. I.e. for Tumbleweed:
+
+zypper ar https://download.opensuse.org/repositories/home:/jordimassaguerpla:/osc-plugins/openSUSE_Tumbleweed/ hj:osc-plugins
+zypper install --from hj:osc-plugins osc-requests-tags
 
 (*) In new and review state. It will not show declined requests
